@@ -1,6 +1,10 @@
 const checkAmountInput = document.querySelector("#check-amount");
 const resultSpan = document.querySelector(".tip-amount");
 const tipPercentageInput = document.querySelector(".tip-percentage");
+const formatter = new Intl.NumberFormat("en-US",{
+    style: "currency",
+    currency: "USD",
+})
 
 checkAmountInput.addEventListener("focus", function () {
   this.value = "";
@@ -24,5 +28,5 @@ tipPercentageInput.addEventListener("change", () => {
 
 function calculateTip(checkAmount, tipPercent) {
   let tipAmount = checkAmount * tipPercent;
-  resultSpan.innerText = "$" + tipAmount;
+  resultSpan.innerText = formatter.format(tipAmount);
 }
