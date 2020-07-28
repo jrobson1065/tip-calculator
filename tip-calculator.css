@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.form,
+.tip-amount {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  font-size: 50pt;
+  display: block;
+}
+
+input {
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 50pt;
+  width: 400px;
+  text-align: center;
+}
+
+.result {
+    margin-top: 50px;
+}
+
+.tip-amount {
+  font-size: 50pt;
+}
